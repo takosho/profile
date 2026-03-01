@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>田光翔 — 自己紹介</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+      background: #0d0d0d;
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 60px rgba(108, 92, 231, 0.12), 0 4px 30px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(108, 92, 231, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      margin-bottom: 24px;
+      overflow: hidden;
+      border: 2px solid #2a2a2a;
+      box-shadow: 0 0 20px rgba(108, 92, 231, 0.3);
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+
+    .name ruby {
+      ruby-align: center;
+    }
+
+    .name rt {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: #888;
+    }
+
+    .name-en {
+      font-size: 13px;
+      color: #555;
+      letter-spacing: 0.1em;
+      margin-bottom: 36px;
+      text-transform: uppercase;
+    }
+
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #6c5ce7;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #222;
+    }
+
+    .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #1e1b35;
+      color: #a99df5;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #2e2850;
+    }
+
+    .certs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #1a1a1a;
+      border: 1px solid #252525;
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+
+    .cert-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .cert-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #f0f0f0;
+    }
+
+    .cert-score {
+      font-size: 12px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .cert-badge {
+      margin-left: auto;
+      background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .message {
+      background: #111;
+      border-left: 3px solid #6c5ce7;
+      padding: 16px 18px;
+      border-radius: 0 10px 10px 0;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #bbb;
+    }
+
+    .resume-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      padding: 13px 22px;
+      background: linear-gradient(135deg, #6c5ce7, #8b7cf8);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: opacity 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(108, 92, 231, 0.35);
+    }
+
+    .resume-link:hover {
+      opacity: 0.88;
+      transform: translateY(-2px);
+    }
+
+    .resume-link svg {
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- SVG Avatar -->
+    <svg class="avatar" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="44" cy="44" r="44" fill="#1e1b35"/>
+      <ellipse cx="44" cy="74" rx="22" ry="14" fill="#6c5ce7"/>
+      <rect x="39" y="54" width="10" height="10" rx="4" fill="#f0c5a0"/>
+      <ellipse cx="44" cy="44" rx="18" ry="20" fill="#f0c5a0"/>
+      <ellipse cx="44" cy="30" rx="18" ry="10" fill="#1a1a1a"/>
+      <rect x="26" y="30" width="36" height="8" fill="#1a1a1a"/>
+      <ellipse cx="37" cy="44" rx="3" ry="3.5" fill="#fff"/>
+      <ellipse cx="51" cy="44" rx="3" ry="3.5" fill="#fff"/>
+      <circle cx="38" cy="44" r="1.8" fill="#1a1a1a"/>
+      <circle cx="52" cy="44" r="1.8" fill="#1a1a1a"/>
+      <path d="M34 39 Q37 37 40 39" stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M48 39 Q51 37 54 39" stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M44 47 Q42 50 44 51 Q46 50 44 47" stroke="#c9956e" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M40 55 Q44 58 48 55" stroke="#c06060" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <div class="name">
+      <ruby>田光<rt>たこう</rt></ruby>　<ruby>翔<rt>しょう</rt></ruby>
+    </div>
+    <div class="name-en">Takou Shou</div>
+
+    <div class="section">
+      <div class="section-label">好きなこと</div>
+      <div class="hobbies">
+        <span class="tag">🥊 ボクシング</span>
+        <span class="tag">✈️ 旅行</span>
+        <span class="tag">☕ コーヒー</span>
+        <span class="tag">📚 読書</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">保有資格</div>
+      <div class="certs">
+        <div class="cert-item">
+          <span class="cert-icon">📝</span>
+          <div>
+            <div class="cert-name">TOEIC</div>
+            <div class="cert-score">Listening & Reading</div>
+          </div>
+          <span class="cert-badge">830点</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-icon">🌏</span>
+          <div>
+            <div class="cert-name">IELTS (General)</div>
+            <div class="cert-score">International English Language Testing System</div>
+          </div>
+          <span class="cert-badge">Overall 6.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">一言メッセージ</div>
+      <div class="message">
+        愛知生まれ、フィリピン・オーストラリアを経て、現在は大阪在住。世界を渡り歩いた経験を活かしながら、日々挑戦し続けています。よろしくお願いします！
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">詳細プロフィール</div>
+      <a class="resume-link" href="resume.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10 9 9 9 8 9"/>
+        </svg>
+        履歴書・経歴を見る
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
